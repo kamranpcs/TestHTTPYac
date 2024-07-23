@@ -1,0 +1,55 @@
+//Get Header 
+GET https://httpbin.org/headers 
+  Content-Type: application/json
+  User-Agent:Chrome
+  ??header Content-Type == application/json
+
+###
+//GET IP
+GET https://httpbin.org/ip
+
+
+###
+//GET User-Agent
+GET https://httpbin.org/user-agent
+?? body contains httpyac
+###
+GET https://httpbin.org/anything
+  ?q=httpyac
+  &ie=UTF-8
+
+  ###
+  GET https://httpbin.org/anything
+Content-Type: application/json
+User-Agent:Chrome
+###
+POST https://httpbin.org/anything
+User-Agent:chrome
+Content-Type: application/json
+{
+    "Name":"kamran",
+    "family":"Nemati"
+}
+####
+
+{{
+  exports.data = [1, 2, 3, 4, 5];
+}}
+###
+# @loop for item of data
+GET https://httpbin.org/anything?item={{item}}
+###
+# {{
+# exports.item=[5, 4, 3, 2, 1]
+# exports.Name="TestName"
+# }}
+# #
+# GET https://httpbin.org/anything?
+# item={{item}}
+# Name={{Name}}
+####
+# @note Are you sure?
+GET https://httpbin.org/headers
+
+####
+GET  https://httpbin.org/anything
